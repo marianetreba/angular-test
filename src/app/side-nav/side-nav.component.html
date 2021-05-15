@@ -4,10 +4,10 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-nav-list>
-      <a mat-list-item href="#">{{ 'COLLEGE.About' | translate }}</a>
-      <a mat-list-item href="#">{{ 'COLLEGE.Courses' | translate }}</a>
-      <a mat-list-item href="#">{{ 'COLLEGE.Teachers' | translate }}</a>
-      <a mat-list-item href="#">{{ 'COLLEGE.Contacts' | translate }}</a>
+      <a mat-list-item routerLink="/about">{{ 'COLLEGE.About' | translate }}</a>
+      <a mat-list-item routerLink="/courses">{{ 'COLLEGE.Courses' | translate }}</a>
+      <a mat-list-item routerLink="/teachers">{{ 'COLLEGE.Teachers' | translate }}</a>
+      <a mat-list-item routerLink="/contacts">{{ 'COLLEGE.Contacts' | translate }}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,6 +22,6 @@
       </button>
       <span>Angular Test + Material</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
